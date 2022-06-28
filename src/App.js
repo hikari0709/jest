@@ -1,13 +1,13 @@
 import './App.css';
 
-import InputTextForm from './conponents/InputTextForm';
+import MonthButton from './conponents/MonthButton';
 
 const title = 'Hello React';
 
 function App() {
   return (
     <div className="App">
-      <InputTextForm />
+      <MonthButton />
     </div>
   );
 }

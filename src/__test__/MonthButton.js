@@ -1,14 +1,13 @@
 import { render, screen } from '@testing-library/react'
 import user from "@testing-library/user-event"
-import InputTextForm from '../conponents/InputTextForm'
+import MonthButton from '../conponents/MonthButton'
 
 describe('test', () => {
   test('input form', () => {
-    render(<InputTextForm />);
+    render(<MonthButton />);
 
-    const headerTitle = screen.getByText("デフォルト");
-    const titleInput = screen.getByRole("textbox", { name: "" });
-    const executeButton = screen.getByTestId("executeButton");
+    const thisMonth = screen.getByTestId('currentMonth');
+    const nextMonth = screen.getByTestId('nextMonth');
 
     user.type(titleInput, "変更後");
     user.click(executeButton);
